@@ -13,22 +13,5 @@ public class Selb {
         PrinterId = printerId;
         TonnerId = tonnerId;
         SelbValue = selbValue;
-    }
-
-    //substitui a classe status por esse modulo aqui, fica mais pratico
-    public string ObterStatus() {
-        if (Tonner == null) {
-            return "Indefinido";
-        }
-
-        if (Tonner.QuantidadeDeTonner < 0) {
-            return "Sem nada";
-        } 
-        else if (Tonner.QuantidadeDeTonner == 1) {
-            return "Alerta";
-        } 
-        else {
-            return "Disponível";
-        }
-    }
+    }    
 }

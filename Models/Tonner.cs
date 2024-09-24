@@ -7,7 +7,7 @@ public class Tonner
     public string SelbValue { get; set; } = string.Empty;// coloquei a string inves da
     //colecao
     public int QuantidadeDeTonner { get; set; } //adicionei que estava faltando
-
+    public string Status { get; set; }
     //adicionei um construtor
     public Tonner(int id, string? printer, string? tipo, string? cor, string selbValue, int quantidadeDeTonner)
     {
@@ -17,5 +17,19 @@ public class Tonner
         Cor = cor;
         SelbValue = selbValue;
         QuantidadeDeTonner = quantidadeDeTonner;
+        Status = ObterStatus();
+    }
+
+    public string ObterStatus() {
+        
+        if (QuantidadeDeTonner < 0) {
+            return "Sem nada";
+        } 
+        else if (QuantidadeDeTonner == 1) {
+            return "Alerta";
+        } 
+        else {
+            return "Disponível";
+        }
     }
 }

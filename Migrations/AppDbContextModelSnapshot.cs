@@ -88,6 +88,10 @@ namespace PrintersApi.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.Property<string>("Tipo")
                         .HasColumnType("longtext");
 
